@@ -60,10 +60,8 @@ width="150px"
 
 # R-Ladies Global 
 
-[`r fontawesome::fa("link", fill = "#FFFFFF")` rladies.org](https://rladies.org)<br/>
-[`r fontawesome::fa("twitter", fill = "#FFFFFF")` @RLadiesGlobal](https://twitter.com/rladiesglobal)<br/>
-[`r fontawesome::fa("paper-plane", fill = "#FFFFFF")` info@rladies.org](mailto:info@rladies.org)<br>
-[`r fontawesome::fa("slack", fill = "#FFFFFF")` Join the Slack](https://rladies-community-slack.herokuapp.com/)
+Hello, my name is Deborah and I'm just trying this slide out. 
+
 
 ???
 Hello! My name is R-Ladies Global and I'm excited to be here to help promote gender diversity in the R community.
@@ -264,10 +262,10 @@ class: middle, inverse, title-slide
 src="img/RLadiesGlobal.png"
 width="150px" />
 
-[`r fontawesome::fa("link", fill = "#FFFFFF")` rladies.org](https://rladies.org)<br/>
-[`r fontawesome::fa("twitter", fill = "#FFFFFF")` @RLadiesGlobal](https://twitter.com/rladiesglobal)<br/>
-[`r fontawesome::fa("paper-plane", fill = "#FFFFFF")` info@rladies.org](mailto:info@rladies.org)<br>
-[`r fontawesome::fa("slack", fill = "#FFFFFF")` Join the Slack](https://rladies-community-slack.herokuapp.com/)
+[rladies.org](https://rladies.org)<br/>
+[@RLadiesGlobal](https://twitter.com/rladiesglobal)<br/>
+[info@rladies.org](mailto:info@rladies.org)<br>
+[Join the Slack](https://rladies-community-slack.herokuapp.com/)
 ]]
 
 ???
