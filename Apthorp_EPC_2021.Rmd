@@ -34,7 +34,7 @@ library(palmerpenguins)
 library(fontawesome)
 
 # preset code chunk options
-knitr::opts_chunk$set(dpi = 150,            # ensures high resolution images
+knitr::opts_chunk$set(dpi = 100,            # ensures high resolution images
                       echo = FALSE,         # FALSE: code chunks don't show
                       warning = FALSE,      # FALSE: suppresses warning messages
                       error = FALSE)        # FALSE: Suppresses error messages
