@@ -34,7 +34,7 @@ library(palmerpenguins)
 library(fontawesome)
 
 # preset code chunk options
-knitr::opts_chunk$set(dpi = 300,            # ensures high resolution images
+knitr::opts_chunk$set(dpi = 150,            # ensures high resolution images
                       echo = FALSE,         # FALSE: code chunks don't show
                       warning = FALSE,      # FALSE: suppresses warning messages
                       error = FALSE)        # FALSE: Suppresses error messages
@@ -243,138 +243,466 @@ I worked with group projects from 2018-2020
 
   - Are autism spectrum characteristics related to motor control in the general population?
   
-???
-This slide uses:
-- bullet list with `*`
-- incremental slides divided by `--`
-- numbered list with `1.`
-- a horizontal bar
-- the `.footnote[]` class
+---
+background-image: url("img/farm.png")
+background-size: cover
+class: center, bottom, inverse
+
+# It's a new world!
 
 ---
-# Inserting images
 
-```{r, echo = TRUE, fig.alt="World map with countries that have R-Ladies chapters highlighted in purple"}
-knitr::include_graphics("img/RLadiesMap.png")
-```
+# Online data collection tools considered
+
+.pull-left[ 
+
+- [Qualtrics](https://www.qualtrics.com/au/)
+  - Good for surveys
+  - Requires licence
+- [Inquisit](https://www.millisecond.com/) 
+  - Designed for online behavioural data collection
+  - Requires licence
+  - Easy to program
+- [Testable](https://www.testable.org/)
+  - Free to use for basic licence
+  - Optional participant pool
+  - Slick interface
+- [PsychoPy](https://www.psychopy.org/)
+  - Free, open source
+  - Good timing
+  - GUI only for online testing
+  - Links to Pavlovia for testing
+  ]
+.pull-right[
+![Qualtrics](img/Qualtrics.png)
+![Inquisit](img/inquisit_v6_logo.png)
+![Testable](img/TestableLogo.png)
+
+![PsychoPy](img/psychopyLogo.png)]
+
+---
+
+# What we chose (2018-2019) - Qualtrics & Inquisit
 
 --
 
-> Note: You can use the `fig.alt` code chunk option to add alternative text to your images, that way they are accessible to screen reader users:
-- In code chunk: `{r, fig.alt = "<descriptive alt text>"}`.
-- Read more about this in [{knitr} NEWS.md](https://github.com/yihui/knitr/blob/master/NEWS.md#new-features-1)
+- Qualtrics is better for surveys (complex skip logic etc.)
 
-???
-This slide uses:
-- an image inserted with `knitr::include_graphics()`
-- the `fig.alt =` code chunk option for alternative text
-
----
-# Tables and quotes
-
-### Table
-
-.pull-left[
-
-`palmerpenguins::penguins`
-
-The `penguins` dataset contains size measurements for adult penguins nesting near Palmer Station in Antarctica.
-
-Measurements like `body_mass_g`
-]
-
-.pull-right[
-
-```{r}
-palmerpenguins::penguins %>%
-  select(species, island, body_mass_g) %>%
-  arrange(body_mass_g) %>%
-  head() %>%
-  knitr::kable(format = 'html')
-```
-]
-
-???
-This slide uses:
-- the `.pull-left[]` and `.pull-right[]` classes
-- an R code chunk to produce the html table
+--
+ 
+- Can link through to Inquisit with hyperlink, taking ID code with it
 
 --
 
-### Quote
+- Drawbacks: 
 
-> You can read more about the `palmerpenguins` data package authored and maintained by Allison Horst at [allisonhorst.github.io/palmerpenguins](https://allisonhorst.github.io/palmerpenguins/)
+--
+ 
+  - Inquisit requires participants to download a program
 
-???
-- a quote with `>`
+--
 
----
-# Highlighting code
+  - We lost a lot of participants at this point
+ 
+--
 
-`> This is what inline code looks like`
+  - 2019: lower dropout (warned them better?)
+ 
+--
 
-You can highlight lines of code within code chunks using `#<<`:
+- Advantages:
 
-### Code
+--
 
-```r
-palmerpenguins::penguins %>%
-  ggplot(aes(x = island, y = body_mass_g)) +
-  geom_boxplot(aes(fill = island))               #<<
-```
+  - Inquisit has *huge* test library
 
-### Output
+--
 
-```{r eval=FALSE, echo=TRUE}
-palmerpenguins::penguins %>%
-  ggplot(aes(x = species, y = body_mass_g)) +
-  geom_boxplot(aes(fill = island))               #<<
-```
+  - Easy to program where necessary
 
-???
-This slide uses:
-- inline code highlighting with backticks ` `` `
-- a code chunk to produce a ggplot
+--
+
+  - Relatively good timing due to everything running on Inquisit Player
 
 ---
 
-```{r penguin-body-mass, eval=TRUE, echo=TRUE, fig.height = 4.5}
-palmerpenguins::penguins %>%
-  ggplot(aes(x = species, y = body_mass_g)) +
-  geom_boxplot(aes(fill = island))               
-```
+# Measures - survey & behavioural
+--
 
-???
-This slide uses:
-- a code chunk to produce a ggplot
-- code chunk option `fig.height = 4.5` to control the figure height
+- Survey measures: 
+
+--
+ 
+  - DASS (Depression, Anxiety, Stress)
+
+--
+
+  - AQ-10 (Autism spectrum characteristics)
+
+--
+ 
+  - MEQ (Morningness-eveningness Questionnaire)
+
+--
+
+  - AUDIT alcohol consumption 
+ 
+--
+
+  - PSQI (Pittsburgh Sleep Quality Inventory)
+ 
+--
+
+- Behavioural Measures:
+
+--
+
+  - Visual N-Back Task (Working memory)
+
+--
+
+  - PVT (Psychomotor Vigilance Task)
+
+--
+
+  - Task-switching (Number-Letter Task)
+  
+--
+
+  - Finger Tapping Task (Motor control)
 
 ---
-class: middle, inverse, title-slide
+# Recruitment
+--
 
-.pull-left[
-# Thank you!
-<br/>
-## R-Ladies Global  
+- Recruitment was not as easy as you'd think
 
-### Promoting gender diversity in the R community
-]
+--
 
-.pull-right[
-.right[
-<img style="border-radius: 50%;"
-src="img/RLadiesGlobal.png"
-width="150px" />
+- Probably about the same pace as in-person recruitment
 
-[rladies.org](https://rladies.org)<br/>
-[@RLadiesGlobal](https://twitter.com/rladiesglobal)<br/>
-[info@rladies.org](mailto:info@rladies.org)<br>
-[Join the Slack](https://rladies-community-slack.herokuapp.com/)
-]]
+--
 
-???
-Thank you for joining me!
-You can find my contact information linked on this slide if you want to get in touch, and I'm happy to take any questions.
+- Students who had special populations (shift workers, computer gamers, etc.) struggled to gain enough power 
 
-This slide also uses:
-- the `title-slide` class, to remove the slide number at the bottom :)
+--
+
+- Having a large group helped (each student was supposed to recruit at least 50 participants)
+
+--
+
+
+- Platforms/sources used: Facebook, Instagram, Twitter, Reddit, workplace emails, first-year Psychology pool (last resort)
+
+
+--
+
+
+- Best recruitment source: Reddit! 
+
+
+--
+
+
+- This year: thinking of using Prolific Academic and paying participants (better quality?)
+
+
+---
+background-image: url("img/River.png")
+background-size: cover
+class: center, middle, inverse
+
+# Results
+
+---
+
+# Sample Characteristics (2018)
+
+
+```{r demographic characteristics}
+knitr::kable(a, format = 'html')
+```
+
+---
+
+# Descriptives (survey variables)
+
+Stratified by whether subjects completed behavioural tasks
+
+```{r survey descriptives}
+
+knitr::kable(b, format = 'html')
+```
+
+---
+# Descriptives (behavioural variables)
+
+Stratified by computer platform
+
+```{r behavioural descriptives}
+
+knitr::kable(c, format = 'html')
+```
+
+---
+class: center, top
+
+# Survey variables correlate with each other
+
+```{r correlations plots, echo = FALSE}
+
+Descriptive_subset_survey_2018_cor <-Data_2018 %>%
+ select(Age, Gender, AQ10_score, ME_score, AUDIT_ALC, DASS_Depression, DASS_Anxiety, DASS_Stress, PSQI_Global, Dream_recall)%>%
+  filter(Gender!=3)
+c <- rcorr(as.matrix(Descriptive_subset_survey_2018_cor))
+#c <- cor(Descriptive_subset_survey_2018_cor, use = "complete.obs", method = "spearman")
+corrplot(as.matrix(c$r), type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45, p.mat = c$P, sig.level = 0.05, insig = "blank")
+```
+---
+class: center, top
+
+# Behavioural variables correlate with each other (a bit)
+
+
+```{r correlate behavioural, echo = FALSE}
+Descriptive_subset_behaviour_2018_cor <-Data_2018 %>%
+ select(Age, Gender, PVT_meanRT500, TS_RT_SwitchCost, nBack_dprime, FT_score_dominant, FT_score_nondominant)%>%
+  filter(Gender!=3)
+d <- rcorr(as.matrix(Descriptive_subset_behaviour_2018_cor))
+#c <- cor(Descriptive_subset_survey_2018_cor, use = "complete.obs", method = "spearman")
+corrplot(as.matrix(d$r), type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45, p.mat = d$P, sig.level = 0.05, insig = "blank")
+```
+
+
+---
+class: center, top
+
+# Survey measures are poor predictors of behaviour
+
+
+```{r correlate behavioural and survey}
+Descriptive_subset_behaviour_survey_2018_cor <-Data_2018 %>%
+ select(Age, Gender, PVT_meanRT500, TS_RT_SwitchCost, nBack_dprime, FT_score_dominant, AQ10_score, ME_score, AUDIT_ALC, DASS_Depression, DASS_Anxiety, DASS_Stress, PSQI_Global, Dream_recall)%>%
+  filter(Gender!=3)
+
+
+e <- rcorr(as.matrix(Descriptive_subset_behaviour_survey_2018_cor))
+#c <- cor(Descriptive_subset_survey_2018_cor, use = "complete.obs", method = "spearman")
+corrplot(as.matrix(e$r), type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45, p.mat = e$P, sig.level = 0.05, insig = "blank")
+```
+
+---
+# Findings of individual projects 
+
+--
+
+- **Dream recall** significantly predicted **working memory performance** on the N-back working memory task (after controlling for age and gender), but sleep quality did not
+
+--
+
+- **Sleep quality** did NOT predict performance on the **PVT** (after controlling for age and gender)
+
+--
+
+- **Autism spectrum characteristics** predicted **finger tapping** performance, and interacted with **age** (stronger association in younger participants) - Alycia Messing's talk yesterday
+
+--
+
+- **Chronotype** (morningness-eveningness) did NOT predict performance on **task switching** (and neither did sleep quality)
+
+--
+
+- **Alcohol use** did NOT moderate the relationship between **anxiety** and **sleep quality**
+
+--
+
+- **Shift work** did NOT affect **sleep quality** or **depression** (but underpowered)
+
+---
+background-image: url("images/island.png")
+background-size: cover
+class: center, bottom, inverse
+
+# Running studies online
+
+### Stage 2 (2019)
+
+---
+
+# Measures - survey & behavioural (2019)
+--
+
+- Survey measures: 
+
+--
+ 
+  - DASS (Depression, Anxiety, Stress)
+
+--
+
+  - **AQ-50** (Autism spectrum characteristics)
+
+--
+ 
+  - MEQ (Morningness-eveningness Questionnaire)
+
+--
+
+  - AUDIT alcohol consumption 
+ 
+--
+
+  - PSQI (Pittsburgh Sleep Quality Inventory)
+ 
+--
+
+- Behavioural Measures:
+
+
+--
+
+  - PVT (Psychomotor Vigilance Task)
+
+--
+
+  - **Iowa Gambling Task (Decision-making)**
+  
+--
+
+  - Finger Tapping Task (Motor control)
+
+
+---
+
+# Sample Characteristics (2019)
+
+
+```{r sample descriptives 2019}
+
+knitr::kable(a_2019, format = 'html')
+```
+
+---
+
+# Descriptives (survey variables) - 2019 sample 
+
+Stratified by whether subjects completed behavioural tasks
+
+```{r survey descriptives 2019}
+
+knitr::kable(b_2019, format = 'html')
+```
+
+---
+
+# Descriptives (behavioural variables) - 2019 sample 
+
+Stratified by computer platform
+
+```{r behavioural descriptives 2019}
+
+knitr::kable(f, format = 'html')
+```
+
+
+---
+class: center, top
+
+## Survey variables correlate with each other (as before)
+```{r correlations plots 2019, echo = FALSE}
+
+Descriptive_subset_survey_2019_cor <-Data_2019 %>%
+ select(Age, Gender, AQ_total, ME_score, AUDIT_ALC, DASS_Depression, DASS_Anxiety, DASS_Stress, PSQI_Global)%>%
+  filter(Gender!=3)
+cor_survey_2019 <- rcorr(as.matrix(Descriptive_subset_survey_2019_cor))
+#c <- cor(Descriptive_subset_survey_2018_cor, use = "complete.obs", method = "spearman")
+corrplot(as.matrix(cor_survey_2019$r), type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45, p.mat = cor_survey_2019$P, sig.level = 0.05, insig = "blank")
+```
+
+---
+class: center, top
+
+## Behavioural variables correlate with each other (a bit more)
+
+
+```{r correlate behavioural 2019, echo = FALSE}
+Descriptive_subset_behaviour_2019_cor <-Data_2019 %>%
+ select(Age, Gender, PVT_meanRT500, FTT_score_dominant, FTT_score_nondominant, IGT_expressions.NET)%>%
+  filter(Gender!=3)
+cor_behaviour_2019 <- rcorr(as.matrix(Descriptive_subset_behaviour_2019_cor))
+#c <- cor(Descriptive_subset_survey_2018_cor, use = "complete.obs", method = "spearman")
+corrplot(as.matrix(cor_behaviour_2019$r), type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45, p.mat = cor_behaviour_2019$P, sig.level = 0.05, insig = "blank")
+```
+
+
+---
+class: center, top
+
+## Survey measures are (again) poor predictors of behaviour
+
+```{r correlate behavioural and survey 2019, fig.align='center', dpi = 80}
+Descriptive_subset_behaviour_survey_2019_cor <-Data_2019 %>%
+ select(Age, Gender, PVT_meanRT500, PVT_meanRT500, FTT_score_dominant, IGT_expressions.NET, AQ_total, ME_score, AUDIT_ALC, DASS_Depression, DASS_Anxiety, DASS_Stress, PSQI_Global)%>%
+  filter(Gender!=3)
+cor_survey_behaviour_2019 <- rcorr(as.matrix(Descriptive_subset_behaviour_survey_2019_cor))
+#c <- cor(Descriptive_subset_survey_2018_cor, use = "complete.obs", method = "spearman")
+
+corrplot(as.matrix(cor_survey_behaviour_2019$r), type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45, p.mat = cor_survey_behaviour_2019$P, sig.level = 0.05, insig = "blank")
+```
+
+---
+# Take home messages
+
+--
+
+- Are survey measures measuring what we think they are measuring? (Sleep quality? Alcohol use? Mood? Chronontype? Autism-spectrum characteristics?)
+
+--
+
+- Is response style driving the correlations between survey measures? 
+
+--
+
+  - E.g. are some subjects more likely to choose the extremes of scales? 
+
+--
+
+- Are behavioural measures measuring what we think they are measuring? (Vigilance? Working memory capacity? Motor control? Executive functioning?)
+
+--
+
+
+- We tend to think of these as more objective, but are they? Or is it all just reaction time? (And what is that measuring?)
+
+--
+
+
+- Also need to think more about how to recruit representative samples and motivate participants
+
+--
+
+
+- I would welcome feedback and thoughts! 
+
+---
+background-image: url("images/RainbowCloud2.png")
+background-size: cover
+class: center, middle, inverse
+
+# Thanks!
+
+Thanks so much to all my students from UNE 
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](https://yihui.org/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+
+Talk (+ data & code) will be available on my website shortly
+
+
