@@ -193,66 +193,57 @@ This slide uses:
 
 ---
 
-.left-column[
-# R-Ladies Global
-]
-
-.right-column[
-
-## Mission 
-
-R-Ladies is a worldwide organization whose mission is to promote Gender Diversity in the R community.
-
-The R community suffers from an underrepresentation of minority genders (including but not limited to cis/trans women, trans men, non-binary, genderqueer, agender) in every role and area of participation, whether as leaders, package developers, conference speakers, conference participants, educators, or users (see recent stats).
-
-
-.footnote[
-
-----
-Original source: https://rladies.org/about-us]
-]
-
-???
-This slide uses:
-- the `.left-column[]` and `.right-column[]` classes
-- a horizontal bar
-- the `.footnote[]` class
+class: inverse, center, middle
+background-image: url(https://media.giphy.com/media/1msv9p84BukVq63l4R/giphy.gif)
+background-size: contain
+# Getting Started
 
 ---
-# Making lists and emphasizing text
+
+???
+So, what to do first? 
+
+---
+# Structure of the projects
+
+I worked with group projects from 2018-2020
 
 --
 
-The R-Ladies Community has:
+5-10 students per group - group data collection, individual questions
 
 --
 
-* 85,144 members
+- Allowed for the possibility of collecting more data than I'd ever had in one place!
 
 --
 
-* Across 56 countries
+- Catch - all data collection had to be online
 
 --
 
-* and 198 chapters worldwide
+- Plan: Combine survey data with online behavioural experiments
 
 --
 
-
------
-
-And with the help of Markdown you can write text in **bold** and _italics_
+- Overall theme: Sleep, Memory and Attention
 
 --
 
-1. And make numbered lists
-1. like this one
+- Individual questions (examples): 
 
-.footnote[
-These numbers come from the [Shiny R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) developed by Ben Ubah
-]
+--
 
+  - Do people with higher visual working memory remember their dreams more? 
+
+--
+
+  - Is "chronotype" related to executive function?
+ 
+--
+
+  - Are autism spectrum characteristics related to motor control in the general population?
+  
 ???
 This slide uses:
 - bullet list with `*`
