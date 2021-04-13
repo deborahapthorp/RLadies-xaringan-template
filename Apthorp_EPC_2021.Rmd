@@ -198,12 +198,11 @@ background-image: url(https://media.giphy.com/media/1msv9p84BukVq63l4R/giphy.gif
 background-size: contain
 # Getting Started
 
----
-
 ???
 So, what to do first? 
 
 ---
+
 # Structure of the projects
 
 I worked with group projects from 2018-2020
