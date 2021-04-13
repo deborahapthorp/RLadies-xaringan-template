@@ -114,173 +114,43 @@ This slide uses:
 - the `.footnote[]` class
 
 ---
-# Inserting images
+background-image: url("images/farm.png")
+background-size: cover
+class: center, bottom, inverse
 
-
-```r
-knitr::include_graphics("img/RLadiesMap.png")
-```
-
-&lt;img src="img/RLadiesMap.png" title="World map with countries that have R-Ladies chapters highlighted in purple" alt="World map with countries that have R-Ladies chapters highlighted in purple" width="452" /&gt;
-
---
-
-&gt; Note: You can use the `fig.alt` code chunk option to add alternative text to your images, that way they are accessible to screen reader users:
-- In code chunk: `{r, fig.alt = "&lt;descriptive alt text&gt;"}`.
-- Read more about this in [{knitr} NEWS.md](https://github.com/yihui/knitr/blob/master/NEWS.md#new-features-1)
-
-???
-This slide uses:
-- an image inserted with `knitr::include_graphics()`
-- the `fig.alt =` code chunk option for alternative text
+# It's a new world!
 
 ---
-# Tables and quotes
 
-### Table
+# Online data collection tools considered
 
-.pull-left[
+.pull-left[ 
 
-`palmerpenguins::penguins`
-
-The `penguins` dataset contains size measurements for adult penguins nesting near Palmer Station in Antarctica.
-
-Measurements like `body_mass_g`
-]
-
+- [Qualtrics](https://www.qualtrics.com/au/)
+  - Good for surveys
+  - Requires licence
+- [Inquisit](https://www.millisecond.com/) 
+  - Designed for online behavioural data collection
+  - Requires licence
+  - Easy to program
+- [Testable](https://www.testable.org/)
+  - Free to use for basic licence
+  - Optional participant pool
+  - Slick interface
+- [PsychoPy](https://www.psychopy.org/)
+  - Free, open source
+  - Good timing
+  - GUI only for online testing
+  - Links to Pavlovia for testing
+  ]
 .pull-right[
+![Qualtrics](img/Qualtrics.png)
+![Inquisit](img/inquisit_v6_logo.png)
+![Testable](img/TestableLogo.png)
 
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; species &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; island &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; body_mass_g &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Chinstrap &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Dream &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2700 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Adelie &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Biscoe &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2850 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Adelie &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Biscoe &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2850 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Adelie &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Biscoe &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2900 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Adelie &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Dream &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2900 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Adelie &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Torgersen &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2900 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-]
-
-???
-This slide uses:
-- the `.pull-left[]` and `.pull-right[]` classes
-- an R code chunk to produce the html table
-
---
-
-### Quote
-
-&gt; You can read more about the `palmerpenguins` data package authored and maintained by Allison Horst at [allisonhorst.github.io/palmerpenguins](https://allisonhorst.github.io/palmerpenguins/)
-
-???
-- a quote with `&gt;`
+![PsychoPy](img/psychopyLogo.png)]
 
 ---
-# Highlighting code
-
-`&gt; This is what inline code looks like`
-
-You can highlight lines of code within code chunks using `#&lt;&lt;`:
-
-### Code
-
-```r
-palmerpenguins::penguins %&gt;%
-  ggplot(aes(x = island, y = body_mass_g)) +
-  geom_boxplot(aes(fill = island))               #&lt;&lt;
-```
-
-### Output
-
-
-```r
-palmerpenguins::penguins %&gt;%
-  ggplot(aes(x = species, y = body_mass_g)) +
-* geom_boxplot(aes(fill = island))
-```
-
-???
-This slide uses:
-- inline code highlighting with backticks ` `` `
-- a code chunk to produce a ggplot
-
----
-
-
-```r
-palmerpenguins::penguins %&gt;%
-  ggplot(aes(x = species, y = body_mass_g)) +
-  geom_boxplot(aes(fill = island))               
-```
-
-![](Apthorp_EPC_2021_files/figure-html/penguin-body-mass-1.png)&lt;!-- --&gt;
-
-???
-This slide uses:
-- a code chunk to produce a ggplot
-- code chunk option `fig.height = 4.5` to control the figure height
-
----
-class: middle, inverse, title-slide
-
-.pull-left[
-# Thank you!
-&lt;br/&gt;
-## R-Ladies Global  
-
-### Promoting gender diversity in the R community
-]
-
-.pull-right[
-.right[
-&lt;img style="border-radius: 50%;"
-src="img/RLadiesGlobal.png"
-width="150px" /&gt;
-
-[rladies.org](https://rladies.org)&lt;br/&gt;
-[@RLadiesGlobal](https://twitter.com/rladiesglobal)&lt;br/&gt;
-[info@rladies.org](mailto:info@rladies.org)&lt;br&gt;
-[Join the Slack](https://rladies-community-slack.herokuapp.com/)
-]]
-
-???
-Thank you for joining me!
-You can find my contact information linked on this slide if you want to get in touch, and I'm happy to take any questions.
-
-This slide also uses:
-- the `title-slide` class, to remove the slide number at the bottom :)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
