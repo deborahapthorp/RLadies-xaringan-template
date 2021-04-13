@@ -251,6 +251,7 @@ class: center, bottom, inverse
 # It's a new world!
 
 ---
+<<<<<<< HEAD
 
 # Online data collection tools considered
 
@@ -622,12 +623,50 @@ cor_survey_2019 <- rcorr(as.matrix(Descriptive_subset_survey_2019_cor))
 corrplot(as.matrix(cor_survey_2019$r), type = "upper", order = "hclust", 
          tl.col = "black", tl.srt = 45, p.mat = cor_survey_2019$P, sig.level = 0.05, insig = "blank")
 ```
+=======
+background-image: url("images/farm.png")
+background-size: cover
+class: center, bottom, inverse
+
+# It's a new world!
+
+---
+
+# Online data collection tools considered
+
+.pull-left[ 
+
+- [Qualtrics](https://www.qualtrics.com/au/)
+  - Good for surveys
+  - Requires licence
+- [Inquisit](https://www.millisecond.com/) 
+  - Designed for online behavioural data collection
+  - Requires licence
+  - Easy to program
+- [Testable](https://www.testable.org/)
+  - Free to use for basic licence
+  - Optional participant pool
+  - Slick interface
+- [PsychoPy](https://www.psychopy.org/)
+  - Free, open source
+  - Good timing
+  - GUI only for online testing
+  - Links to Pavlovia for testing
+  ]
+.pull-right[
+![Qualtrics](images/Qualtrics.png)
+![Inquisit](images/inquisit_v6_logo.png)
+![Testable](images/TestableLogo.png)
+
+![PsychoPy](images/psychopyLogo.png)]
+>>>>>>> d04b04a4b418c2de37b163e0f91746a6e06256ad
 
 ---
 class: center, top
 
 ## Behavioural variables correlate with each other (a bit more)
 
+<<<<<<< HEAD
 
 ```{r correlate behavioural 2019, echo = FALSE}
 Descriptive_subset_behaviour_2019_cor <-Data_2019 %>%
@@ -706,3 +745,5 @@ The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](https://yih
 Talk (+ data & code) will be available on my website shortly
 
 
+=======
+>>>>>>> d04b04a4b418c2de37b163e0f91746a6e06256ad
